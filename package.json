@@ -1,0 +1,76 @@
+{
+  "name": "markdown-file-link-opener",
+  "displayName": "Markdown File Link Opener",
+  "description": "Open file:// links in markdown with the system default application (Excel, Explorer, etc.)",
+  "version": "0.1.4",
+  "publisher": "yu1row",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "keywords": [
+    "markdown",
+    "file",
+    "link",
+    "excel",
+    "xlsx",
+    "unc",
+    "network",
+    "external"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yu1row/markdown-file-link-opener.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "commands": [
+      {
+        "command": "markdown-file-link-opener.open",
+        "title": "Open file:// Link Externally"
+      },
+      {
+        "command": "markdown-file-link-opener.openAtCursor",
+        "title": "Open file:// Link at Cursor"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "markdown-file-link-opener.openAtCursor",
+          "when": "editorLangId == markdown",
+          "group": "navigation@100"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.5.0"
+  }
+}
