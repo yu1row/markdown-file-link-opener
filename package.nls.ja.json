@@ -1,0 +1,7 @@
+{
+	"displayName": "Markdown File Link Opener",
+	"description": "Markdown の file:// リンクを開く。テキストは VS Code、バイナリは OS 既定アプリ",
+	"command.open": "file:// リンクを開く",
+	"command.openAtCursor": "カーソル位置の file:// リンクを開く",
+	"command.showLog": "Markdown File Link Opener のログを表示"
+}

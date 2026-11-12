@@ -1,0 +1,7 @@
+{
+	"displayName": "Markdown File Link Opener",
+	"description": "Open file:// links from Markdown: text in VS Code, binaries with the system app",
+	"command.open": "Open file:// Link",
+	"command.openAtCursor": "Open file:// Link at Cursor",
+	"command.showLog": "Show Markdown File Link Opener Log"
+}

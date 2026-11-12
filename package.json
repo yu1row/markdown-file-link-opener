@@ -1,8 +1,8 @@
 {
   "name": "markdown-file-link-opener",
-  "displayName": "Markdown File Link Opener",
-  "description": "Open file:// links in markdown with the system default application (Excel, Explorer, etc.)",
-  "version": "0.1.4",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "0.1.5",
   "publisher": "yu1row",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -17,7 +17,8 @@
     "xlsx",
     "unc",
     "network",
-    "external"
+    "external",
+    "preview"
   ],
   "repository": {
     "type": "git",
@@ -31,7 +32,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:markdown"
+    "onLanguage:markdown",
+    "onUri"
   ],
   "main": "./out/extension.js",
   "capabilities": {
@@ -45,11 +47,15 @@
     "commands": [
       {
         "command": "markdown-file-link-opener.open",
-        "title": "Open file:// Link Externally"
+        "title": "%command.open%"
       },
       {
         "command": "markdown-file-link-opener.openAtCursor",
-        "title": "Open file:// Link at Cursor"
+        "title": "%command.openAtCursor%"
+      },
+      {
+        "command": "markdown-file-link-opener.showLog",
+        "title": "%command.showLog%"
       }
     ],
     "menus": {
@@ -65,6 +71,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
+    "test": "npm run compile && node --test tests/*.test.js",
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
