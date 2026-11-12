@@ -7,3 +7,6 @@ tsconfig.json
 **/*.ts
 **/*.map
 **/*.test.js
+PUBLISHING.md
+.env
+.env.*

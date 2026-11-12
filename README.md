@@ -135,6 +135,8 @@ npm test
 
 `F5` で Extension Development Host を起動し、`example/test-links.md` で動作確認できます。
 
+GitHub Release / Marketplace への手動公開手順は [PUBLISHING.md](./PUBLISHING.md) を参照してください。
+
 #### プロジェクト構成
 
 ```
@@ -289,6 +291,8 @@ npm test
 ```
 
 Press `F5` and try `example/test-links.md`.
+
+For manual GitHub Release / Marketplace publishing, see [PUBLISHING.md](./PUBLISHING.md).
 
 #### Layout
 
